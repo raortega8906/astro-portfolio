@@ -1,0 +1,76 @@
+---
+import Badge from '../components/Badge.astro';
+import Layout from '../layouts/Layout.astro';
+import SocialIcons from '../components/SocialIcons.astro';
+import Linkedin from '../components/icons/Linkedin.astro';
+import Instagram from '../components/icons/Instagram.astro';
+import Email from '../components/icons/Email.astro';
+import Briefcase from '../components/icons/Briefcase.astro';
+import Code from '../components/icons/Code.astro';
+import Form from '../components/icons/Form.astro';
+import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
+---
+
+<Layout title="Portafolio - Chabely Escalona Ramón">
+	<main class="px-4">
+
+		<section class="w-full mx-auto lg:w-[740px] py-44" id="about">
+			<h1 class="text-white text-2xl lg:text-4xl font-bold flex flex-row gap-x-4 pb-2 lg:pb-6 flex-wrap">
+				Hola, soy Chabely Escalona
+				<a href="https://www.linkedin.com/in/chabely-escalona-180913193/" target="_blank" rel="noopener">
+					<Badge>Disponible para trabajar</Badge>
+				</a>
+			</h1>
+			<h2 class="text-xl lg:text-1.75xl text-wrap max-w-[600px]">
+				<span>+2 años de experiencia.</span>
+				<span class="text-pink-300">Disañadora Web y Creadora de Contenido. </span>
+				Ubicada en Madrid, España. Especializada en dar soluciones a medida.
+			</h2>
+
+			<nav class="flex gap-4 mt-8 flex-wrap">
+				<SocialIcons href="https://www.linkedin.com/in/chabely-escalona-180913193/">
+					<Linkedin class="size-4 md:size-6"/>
+					LinkedIn
+				</SocialIcons>
+
+				<SocialIcons href="https://www.instagram.com/chabelyer?igsh=d3B1eTIwZmh3NGN6">
+					<Instagram class="size-4 md:size-6"/>
+					Instagram
+				</SocialIcons>
+
+				<SocialIcons href="mailto:chabelyescalona@gmail.com">
+					<Email class="size-4 md:size-6" />
+					chabelyescalona@gmail.com
+				</SocialIcons>
+			</nav>
+
+		</section>
+
+		<section class="w-full mx-auto lg:w-[740px] pb-24" id="experience">
+			<h2 class="flex items-center text-2xl font-semibold mb-6 gap-x-3">
+				<Briefcase class="size-6" />
+				Experiencia laboral
+			</h2>
+			<Experience />
+		</section>
+
+		<section class="w-full mx-auto lg:w-[740px] py-20 pb-24" id="projects">
+			<h2 class="flex items-center text-2xl font-semibold mb-6 gap-x-3">
+				<Code class="size-6" />
+				Proyectos
+			</h2>
+			<Projects />
+		</section>
+
+		<section class="w-full mx-auto lg:w-[740px] py-20 pb-24" id="contact">
+			<h2 class="flex items-center text-2xl font-semibold mb-6 gap-x-3">
+				<Form class="size-6" />
+				Contacto
+			</h2>
+			<Contact />
+		</section>
+
+	</main>
+</Layout>

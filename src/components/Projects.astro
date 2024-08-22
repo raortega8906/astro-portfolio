@@ -1,0 +1,84 @@
+---
+import Astro from './icons/AstroIcon.astro';
+import Wordpress from './icons/Wordpress.astro';
+import Photoshop from './icons/Photoshop.astro';
+import Figma from './icons/FigmaIcon.astro';
+
+
+const TAGS = {
+    ASTRO: {
+        name: "Astro",
+        class: "bg-[#003159] text-[#f0f0f0]",
+        icon: Astro,
+    },
+    WORDPRESS: {
+        name: "WordPress",
+        class: "bg-[#003159] text-[#f0f0f0]",
+        icon: Wordpress,
+    },
+    FIGMA: {
+        name: "Figma",
+        class: "bg-[#003159] text-[#f0f0f0]",
+        icon: Figma,
+    },
+    PHOTOSHOP: {
+        name: "Photoshop",
+        class: "bg-[#003159] text-[#f0f0f0]",
+        icon: Photoshop,
+    }
+}
+
+const PROJECTS = [
+    {
+        title: 'Portfolio - Chabely Design',
+        description: 'Portafolio de Chabely Escalona Ramón',
+        link: 'https://chabelydesign.wpcache.es',
+        github: '#',
+        image: '/images/chabelydesign.jpg',
+        tags: [
+            TAGS.FIGMA, TAGS.PHOTOSHOP
+        ]
+    },
+    {
+        title: 'Portfolio - Rafael A. Ortega',
+        description: 'Portafolio de Rafael A. Ortega',
+        link: 'https://rafaelortegaweb.wpcache.es',
+        github: '#',
+        image: '/images/rafaelortegaweb.jpg',
+        tags: [
+             TAGS.FIGMA, TAGS.PHOTOSHOP
+        ]
+    },
+    {
+        title: 'Gelash Madrid - Cejas, Pestañas y Cursos',
+        description: 'Web corporativa - Gelash Madrid. Servicios de Pestañas, Cejas, Depilación y Cursos.',
+        link: 'https://gelashmadrid.wpcache.es',
+        github: '#',
+        image: '/images/gelashmadrid.jpg',
+        tags: [
+            TAGS.FIGMA, TAGS.PHOTOSHOP
+        ]
+    }
+];
+---
+
+{
+    PROJECTS.map(({ title, description, tags, image}) => (
+            <article class="mb-10">
+                <h3 class="text-2xl font-semibold text-pink-300 mb-2">{title}</h3>
+                <p class="text-lg mb-4 text-pretty">{description}</p>
+                <ul class="flex flex-row gap-x-2 mb-4">
+                    {tags.map((tag) => (
+                        <li>
+                            <span class={`flex gap-x-2 rounded-full text-xs py-1 px-2 mb-2 ${tag.class}`}>
+                                <tag.icon className="size-4"  />
+                                {tag.name}
+                            </span>
+                        </li>
+                    ))}
+                </ul>
+                <img class="rounded shadow-2x1 shadow-white/10" src={image} alt={`Mockup de ${image}`} />
+            </article>
+        )
+    )
+}
