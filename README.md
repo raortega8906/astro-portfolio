@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://astro.build" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg" alt="php" width="120"/>
+    <img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg" alt="astro" width="120"/>
   </a>
 </p>
 
